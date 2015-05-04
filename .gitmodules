@@ -1,0 +1,3 @@
+[submodule "dep0"]
+	path = dep0
+	url = git@github.com:lavcraft/cmake-dependency-dep0.git
