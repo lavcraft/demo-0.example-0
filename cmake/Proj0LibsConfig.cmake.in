@@ -1,0 +1,15 @@
+set(proj0_FOUND 1)
+
+set(proj0_VERSION_MAJOR   "@proj0_VERSION_MAJOR@")
+set(proj0_VERSION_MINOR   "@proj0_VERSION_MINOR@")
+set(proj0_VERSION_PATCH   "@proj0_VERSION_PATCH@")
+set(proj0_VERSION         "${proj0_VERSION_MAJOR}.${proj0_VERSION_MINOR}.${proj0_VERSION_PATCH}")
+
+set(proj0_INSTALL_PREFIX  "@CMAKE_INSTALL_PREFIX@")
+set(proj0_INCLUDE_DIRS    "${proj0_INSTALL_PREFIX}/@INSTALL_INCLUDE_DIR@")
+set(proj0_LIBRARY_DIR     "${proj0_INSTALL_PREFIX}/@INSTALL_LIBRARY_DIR@@LIB_SUFFIX@")
+set(proj0_RUNTIME_DIR     "${proj0_INSTALL_PREFIX}/@INSTALL_RUNTIME_DIR@")
+set(proj0_CMAKE_DIR       "${proj0_LIBRARY_DIR}/cmake/proj0")
+
+set(proj0_PLUGINS         "@proj0_PLUGINS@")
+set(proj0_STATIC_PLUGINS  "@proj0_STATIC_PLUGINS@")
