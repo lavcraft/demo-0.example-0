@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(proj0 CXX)
+ENABLE_TESTING()
+INCLUDE(CTest)
 
 set(CMAKE_MODULE_PATH ${proj0_SOURCE_DIR}/cmake)
 
