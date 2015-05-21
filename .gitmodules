@@ -1,6 +1,6 @@
 [submodule "dep0"]
 	path = dep0
-	url = git@github.com:lavcraft/cmake-dependency-dep0.git
+	url = git@gitlab.com:agat/cmake-dependency-dep0.git
 [submodule "cmake"]
 	path = cmake
-	url = git@github.com:lavcraft/cmake-dependency-cmake.git
+	url = git@gitlab.com:agat/cmake-dependency-cmake.git
