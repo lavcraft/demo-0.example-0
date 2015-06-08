@@ -1,0 +1,11 @@
+jobs:
+- script: |
+    export PATH=~/bin:/usr/local/bin:/usr/sbin:/usr/bin:/bin
+    echo Start building
+    sonar-runner
+  name: Specs
+  branches: true
+  tags: false
+  runner: 
+deploy_jobs: []
+skip_refs: ''
