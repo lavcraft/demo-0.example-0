@@ -1,6 +1,6 @@
 [submodule "dep0"]
 	path = dep0
-	url = git@gitlab.com:agat/cmake-dependency-dep0.git
+	url = git@git.agat:demo-0/dep-0.git
 [submodule "cmake"]
 	path = cmake
-	url = git@gitlab.com:agat/cmake-dependency-cmake.git
+	url = git@git.agat:demo-0/common-cmake.git
