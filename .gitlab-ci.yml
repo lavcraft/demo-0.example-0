@@ -1,14 +1,11 @@
-before_script: |
-  echo START
-jobs:
-- script:
-    - export PATH=~/bin:/usr/local/bin:/usr/sbin:/usr/bin:/bin
-    - echo Start building
-    - echo $USER
-    - sonar-runner
-  name: Base build
-  branches: true
-  tags: false
-  runner: gitlab-ci-multi-runner
-deploy_jobs: []
-skip_refs: ''
+skip_refs: staging
+      before_script: |
+        bundle install
+        bundle exec rake db:setup
+      jobs:
+      - script: "bundle exec rspec"
+        name: Rspec
+        runner: mysql,ruby
+      - "bundle exec cucumber" # or even so
+      deploy_jobs:
+      - "bundle exec cap deploy"
