@@ -1,5 +1,5 @@
-prepare:
-   - echo "prepare"
+before_script: |
+  echo START
 jobs:
 - script:
     - export PATH=~/bin:/usr/local/bin:/usr/sbin:/usr/bin:/bin
