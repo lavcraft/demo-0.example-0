@@ -2,6 +2,7 @@ jobs:
 - script: |
     export PATH=~/bin:/usr/local/bin:/usr/sbin:/usr/bin:/bin
     echo Start building
+    echo $USER
     sonar-runner
   name: Specs
   branches: true
