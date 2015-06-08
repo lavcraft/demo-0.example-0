@@ -8,8 +8,8 @@ for dependency in "${ARRAY[@]}" ; do
     VALUE=${dependency#*:}
     printf "dependency %s version %s.\n" "$KEY" "$VALUE"
     pushd $KEY
-    if [ "last" -eq "$KEY" ]
-	then
+    echo "KEY :$KEY"
+    if [ "last" == "$KEY" ];then
 	git pull origin master
     else
 	git checkout $VALUE
