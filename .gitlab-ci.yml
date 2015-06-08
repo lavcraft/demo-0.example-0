@@ -4,7 +4,7 @@ jobs:
     echo Start building
     echo $USER
     sonar-runner
-  name: Specs
+  name: Base build
   branches: true
   tags: false
   runner: 
