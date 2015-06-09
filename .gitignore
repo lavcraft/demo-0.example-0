@@ -6,3 +6,4 @@ install_manifest.txt
 **/*.a
 /bin
 Testing
+build
