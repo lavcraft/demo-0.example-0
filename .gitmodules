@@ -1,6 +1,8 @@
 [submodule "dep0"]
 	path = dep0
 	url = git@git.agat:demo-0/dep-0.git
+    ignore = all
 [submodule "cmake"]
 	path = cmake
-	url = git@git.agat:demo-0/common-cmake.git
+    url = git@git.agat:demo-0/common-cmake.git
+    ignore = all
