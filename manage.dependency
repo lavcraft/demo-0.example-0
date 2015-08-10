@@ -3,6 +3,7 @@
 FIX_DEPS_FILE=./dependencies.fix
 
 cat /dev/null > $FIX_DEPS_FILE
+
 while read -r dependency; do
     echo $dependency
     KEY=${dependency%%:*}
