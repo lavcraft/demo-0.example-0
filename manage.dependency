@@ -8,15 +8,16 @@ while read -r dependency; do
     echo $dependency
     KEY=${dependency%%:*}
     VALUE=${dependency#*:}
-    printf "dependency %s version %s.\n" "$KEY" "$VALUE"
+    #printf "dependency %s version %s.\n" "$KEY" "$VALUE"
     pushd $KEY
-    echo "KEY :$KEY"
     if [ "last"="$KEY" ];then
 	git pull origin master
     else
 	git checkout $VALUE
     fi
-    echo -n "$KEY:" >> ../$FIX_DEPS_FILE
-    echo `git describe --long --always` >> ../$FIX_DEPS_FILE
     popd
+    echo -n "$KEY:" >> ./$FIX_DEPS_FILE
+    current_dep_version=`git submodule status $KEY | cut -d' ' -f2 | tr -s '+'`
+    echo "use sha $current_dep_version for dependency - $KEY"
+    echo $current_dep_version >> ./$FIX_DEPS_FILE
 done < ./dependencies
